@@ -201,7 +201,7 @@ RUN set -xe; \
     pecl install \
         apcu-5.1.21 \
         amqp-1.11.0beta \
-        ast-1.0.10 \
+        ast-1.0.16 \
         ds-1.4.0 \
         event-3.0.6 \
 #        grpc-1.34.0 \
