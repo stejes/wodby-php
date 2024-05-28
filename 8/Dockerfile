@@ -290,16 +290,16 @@ RUN set -xe; \
     mv /usr/local/etc/php/conf.d/docker-php-ext-event.ini /usr/local/etc/php/conf.d/z-docker-php-ext-event.ini; \
     \
     # NewRelic extension and agent. \
-    newrelic_url="http://download.newrelic.com/php_agent/release/"; \
-    wget -r -nd --no-parent -P /tmp/newrelic -Alinux-musl.tar.gz "${newrelic_url}" >/dev/null 2>&1; \
-    tar -xzf /tmp/newrelic/newrelic-php*.tar.gz --strip=1 -C /tmp/newrelic; \
-    export NR_INSTALL_SILENT=true; \
-    export NR_INSTALL_USE_CP_NOT_LN=true; \
-    bash /tmp/newrelic/newrelic-install install; \
-    rm -f /usr/local/etc/php/conf.d/newrelic.ini; \
-    mkdir -p /var/log/newrelic/; \
-    chown -R www-data:www-data /var/log/newrelic/; \
-    chmod -R 775 /var/log/newrelic/; \
+#    newrelic_url="http://download.newrelic.com/php_agent/release/"; \
+#    wget -r -nd --no-parent -P /tmp/newrelic -Alinux-musl.tar.gz "${newrelic_url}" >/dev/null 2>&1; \
+#    tar -xzf /tmp/newrelic/newrelic-php*.tar.gz --strip=1 -C /tmp/newrelic; \
+#    export NR_INSTALL_SILENT=true; \
+#    export NR_INSTALL_USE_CP_NOT_LN=true; \
+#    bash /tmp/newrelic/newrelic-install install; \
+#    rm -f /usr/local/etc/php/conf.d/newrelic.ini; \
+#    mkdir -p /var/log/newrelic/; \
+#    chown -R www-data:www-data /var/log/newrelic/; \
+#    chmod -R 775 /var/log/newrelic/; \
     \
     # Brotli extension.
     brotli_ext_ver="0.14.2"; \
